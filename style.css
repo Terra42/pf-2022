@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+
+:root {
+  --bg-color: white;
+  --text-color: black;
+  --border-radius: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+h1 {
+  position: absolute;
+  top: 2rem;
+  font-size: 2.5rem;
+}
+
+.pf {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'PT Sans', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  text-align: center;
+}
+
+.container {
+  border: 3px solid var(--text-color);
+  border-radius: var(--border-radius);
+  width: 96%;
+  min-height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: white;
+}
+
+.years {
+  width: 16.5rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.8rem;
+}
+
+.beam {
+  background-color: var(--text-color);
+  height: 3px;
+  width: 17rem;
+  transition: transform 0.2s linear 1.6s;
+}
+
+.barrel {
+  background-color: var(--text-color);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+
+.button {
+  margin-top: 2rem;
+  background-color: var(--text-color);
+  border: none;
+  padding: 1rem;
+  color: var(--bg-color);
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.message {
+  margin-top: 2rem;
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  width: 80%;
+  padding: 1rem;
+  position: absolute;
+  bottom: -10.5rem;
+  visibility: hidden;
+  border-radius: var(--border-radius);
+}
+
+.message p:first-child {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.beam-rotate {
+  transform: rotate(25deg);
+}
+
+@keyframes new-year-animation {
+  0% {
+    top: 0px;
+  }
+  25% {
+    top: -40px;
+  }
+  50% {
+    top: 52px;
+  }
+  75% {
+    transform: rotate(25deg);
+    top: 52px;
+  }
+  100% {
+    top: 52px;
+    transform: rotate(25deg);
+  }
+}
+
+.new-year-animate {
+  position: relative;
+  animation-name: new-year-animation;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes old-year-animation {
+  0% {
+    top: 0px;
+    opacity: 100%;
+  }
+  50% {
+    opacity: 10%;
+  }
+  100% {
+    top: -150px;
+    opacity: 0;
+  }
+}
+
+.old-year-animate {
+  position: relative;
+  animation-name: old-year-animation;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0.18, 1.54, 0.54, 1.19);
+  animation-fill-mode: forwards;
+  animation-delay: 1.5s;
+}
+
+.color-mode {
+  --bg-color: #ebf6f8;
+  --text-color: #00b4cd;
+  --border-radius: 25px;
+}
+
+@media screen and (min-width: 700px) {
+  .container {
+    width: 90%;
+  }
+
+  .beam {
+    width: 26rem;
+  }
+
+  .years {
+    width: 25rem;
+  }
+
+  @keyframes new-year-animation {
+    0% {
+      top: 0px;
+    }
+    25% {
+      top: -60px;
+    }
+    50% {
+      top: 82px;
+    }
+    75% {
+      transform: rotate(25deg);
+      top: 82px;
+    }
+    100% {
+      top: 82px;
+      transform: rotate(25deg);
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  h1 {
+    font-size: 3rem;
+    margin-top: 2rem;
+  }
+
+  .container {
+    width: 80%;
+  }
+
+  .beam {
+    width: 45.5rem;
+    height: 4px;
+  }
+
+  .years {
+    width: 45rem;
+    font-size: 2.2rem;
+  }
+
+  .barrel {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .button {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    margin-top: 3rem;
+  }
+
+  .message {
+    width: 60%;
+  }
+
+  .message p:first-child {
+    font-size: 2rem;
+  }
+
+  .message p:nth-child(2) {
+    font-size: 1.3rem;
+  }
+
+  .beam-rotate {
+    transform: rotate(25deg) scaleX(1.05);
+  }
+
+  @keyframes new-year-animation {
+    0% {
+      top: 0px;
+    }
+    25% {
+      top: -100px;
+    }
+    50% {
+      top: 150px;
+    }
+    75% {
+      transform: rotate(25deg);
+      top: 150px;
+    }
+    100% {
+      top: 150px;
+      transform: rotate(25deg);
+    }
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  .container {
+    width: 70%;
+  }
+
+  .years {
+    font-size: 2.8rem;
+  }
+
+  .message {
+    bottom: -14rem;
+    padding: 2rem;
+  }
+
+  .message p:first-child {
+    font-size: 3rem;
+  }
+
+  .button {
+    margin-top: 4rem;
+    padding: 1.5rem 3rem;
+  }
+}
