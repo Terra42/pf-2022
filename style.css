@@ -20,6 +20,7 @@ h1 {
   position: absolute;
   top: 2rem;
   font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
 .pf {
@@ -39,7 +40,7 @@ h1 {
   border: 3px solid var(--text-color);
   border-radius: var(--border-radius);
   width: 96%;
-  min-height: 50%;
+  min-height: 40%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -194,7 +195,7 @@ h1 {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1600px) {
   h1 {
     font-size: 3rem;
     margin-top: 2rem;
@@ -259,33 +260,5 @@ h1 {
       top: 150px;
       transform: rotate(25deg);
     }
-  }
-}
-
-@media screen and (min-width: 1500px) {
-  h1 {
-    font-size: 4rem;
-  }
-
-  .container {
-    width: 70%;
-  }
-
-  .years {
-    font-size: 2.8rem;
-  }
-
-  .message {
-    bottom: -14rem;
-    padding: 2rem;
-  }
-
-  .message p:first-child {
-    font-size: 3rem;
-  }
-
-  .button {
-    margin-top: 4rem;
-    padding: 1.5rem 3rem;
   }
 }
